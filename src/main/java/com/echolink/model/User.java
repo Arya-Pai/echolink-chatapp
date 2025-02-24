@@ -11,6 +11,10 @@ public class User {
 		this.email=email;
 		this.password=password;
 	}
+	public User(long id,String username) {
+		this.id=id;
+		this.username=username;
+	}
 	
 	public long getID() {
 		return id;

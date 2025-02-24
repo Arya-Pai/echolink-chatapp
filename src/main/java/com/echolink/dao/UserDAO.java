@@ -41,4 +41,17 @@ public class UserDAO {
 		}
 		return status;
 	}
+	
+	public User getUserByEmailAndPassword(String email,String Password) throws ClassNotFoundException, SQLException {
+		try(Connection con=DBUtil.getConnection();
+			PreparedStatement st=con.prepareStatement("SELECT id, username FROM users WHERE email = ? AND password = ?")){
+				st.setString(1, email);
+				st.setString(2, Password);
+				ResultSet rs=st.executeQuery();
+				if(rs.next()) {
+					return new User(rs.getLong("id"),rs.getString("username"));
+				}
+		}
+		return null;
+	}
 }
