@@ -4,18 +4,19 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Registration Page</title>
+<title>Insert title here</title>
 </head>
 <body>
-    <form action="RegistrationPage" method="post">
+	    <form action="LoginPage" method="post">
         <label for="email">Email:</label>
         <input type="email" name="email" id="email" required>
-        <label for="username">Username:</label>
-        <input type="text" name="username" id="username" required>
         <label for="password">Password:</label>
         <input type="password" name="password" id="password" required >
-        <input type="submit" value="Register">
+        <input type="submit" value="Login">
     </form>
+    <a href="register.jsp">Register here!</a>
+    
+    
     <%String fail=(String)session.getAttribute("failureRegistrationMessage");
     	if(fail!=null){
     %>

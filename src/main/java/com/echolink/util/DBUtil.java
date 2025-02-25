@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DBUtil {
-	private static final String JDBC_URl="dbc:mysql://localhost:3306/echolink_db";
+	private static final String JDBC_URl="jdbc:mysql://localhost:3306/echolink_db";
 	 private static final String JDBC_USERNAME = "root";
 	 private static final String JDBC_PASSWORD = "bigchill@8459";
 	 

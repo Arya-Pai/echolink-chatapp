@@ -16,7 +16,7 @@ public class User {
 		this.username=username;
 	}
 	
-	public long getID() {
+	public long getId() {
 		return id;
 	}
 	public String getUsername() {

@@ -14,10 +14,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
 
-/**
- * Servlet implementation class LoginServlet
- */
-@WebServlet("/LoginServlet")
+
 public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	protected void doPost(HttpServletRequest req,HttpServletResponse res) throws ServletException,IOException{
@@ -30,9 +27,9 @@ public class LoginServlet extends HttpServlet {
 			if(present) {
 				User user=dao.getUserByEmailAndPassword(email, password);
 				String username=user.getUsername();
-				long id=user.getID();
-				session.setAttribute("username","username");
-				session.setAttribute("userid","id");
+				long id=user.getId();
+				session.setAttribute("username",String.valueOf(username));
+				session.setAttribute("id", String.valueOf(id));
 				session.setAttribute("userEmail","email");
 				res.sendRedirect("index.jsp");
 			}else {

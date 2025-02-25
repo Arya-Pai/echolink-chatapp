@@ -9,34 +9,19 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+
+  <!-- RegistrationPage-->
+
+    <!-- DAO-->
+ 
   <servlet>
     <description></description>
-    <display-name>RegisterServlet</display-name>
-    <servlet-name>RegisterServlet</servlet-name>
-    <servlet-class>com.echolink.controller.RegisterServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>RegisterServlet</servlet-name>
-    <url-pattern>/RegisterServlet</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>UserDAO</display-name>
-    <servlet-name>UserDAO</servlet-name>
-    <servlet-class>com.echolink.dao.UserDAO</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>UserDAO</servlet-name>
-    <url-pattern>/UserDAO</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>LoginServlet</display-name>
+ <!-- Login Servlet-->
     <servlet-name>LoginServlet</servlet-name>
     <servlet-class>com.echolink.controller.LoginServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>LoginServlet</servlet-name>
-    <url-pattern>/LoginServlet</url-pattern>
+    <url-pattern>/LoginPage</url-pattern>
   </servlet-mapping>
 </web-app>
